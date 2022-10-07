@@ -6,61 +6,61 @@ This is an API for a blog where you run CRUD operations on differents endpoints
 
 #### Get all the blogs
 
-```http
+```bash
   GET /api/blogs
 ```
 
 #### Get Blog
 
-```http
+```bash
   GET /api/blogs/${id}
 ```
 
 #### Create a Blog
 
-```http
+```bash
   POST /api/blogs/
 ```
 
 #### Update Blog
 
-```http
+```bash
   PUT /api/blogs/${id}
 ```
 
 #### Delete Blog
 
-```http
+```bash
   DELETE /api/blogs/${id}
 ```
 
 #### Get all the comments for a blog
 
-```http
+```bash
   GET /api/blogs/${id}/comments
 ```
 
 #### Get a Comment
 
-```http
+```bash
   GET /api/blogs/${id}/comments/${id}
 ```
 
 #### Create a Comment
 
-```http
+```bash
   POST /api/blogs/${id}/comments
 ```
 
 #### Update Comment
 
-```http
+```bash
   PUT /api/blogs/${id}/comments/${id}
 ```
 
 #### Delete Comment
 
-```http
+```bash
   DELETE /api/blogs/${id}/comments/${id}
 ```
 
