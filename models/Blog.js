@@ -1,8 +1,7 @@
-const { categorieSchema, validateCategorie } = require("./Categorie");
 const mongoose = require("mongoose");
 const Joi = require("joi");
 const { Schema } = mongoose;
-
+const { categorieSchema, validateCategorie } = require("./Categorie");
 //Creating Blog schema
 const blogSchema = new Schema({
   title: {
@@ -21,10 +20,10 @@ const blogSchema = new Schema({
     minlength: 3,
     maxlength: 255,
   },
-  image: {
-    type: Buffer,
-    required: false,
-  },
+  // image: {
+  //   type: Buffer,
+  //   required: false,
+  // },
 });
 
 const Blog = mongoose.model("Blog", blogSchema);
@@ -35,7 +34,7 @@ function validateBlog(blog) {
     title: Joi.string().min(3).required(),
     categorieId: Joi.string().required(),
     content: Joi.string().min(3).required(),
-    image: Joi.any(),
+    //image: Joi.any(),
   });
   return schema.validate(blog);
 }
