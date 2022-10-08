@@ -1,3 +1,4 @@
+const categories = require("./routes/BlogRoutes");
 const express = require("express");
 const mongoose = require("mongoose");
 
@@ -15,7 +16,7 @@ mongoose
   .catch((err) => console.log(err));
 //Calling routes
 app.use(express.json());
-//app.use("/api/blogs", );
+app.use("/api/categories", categories);
 
 //Port configuration
 const port = process.env.port || 3000;
